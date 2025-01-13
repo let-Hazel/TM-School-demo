@@ -1,27 +1,28 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-  }
+}
 
 
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-evenly;
     background: linear-gradient(to right, #f83600 0%, #f9d423 100%);
-    margin: auto;
-    padding: 0px;
+    padding: 10px;
     align-items: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -29,10 +30,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(255, 255, 255);
-    font-size: 22px;
+    color: #fff;
+    font-size: 18px;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #332155;
 }
 
 nav ul li a:hover {
@@ -50,7 +55,7 @@ nav ul li a:hover {
 }
 
 .logo img {
-    width: 200px;
+    width: 150px;
 }
 
 .left {
@@ -114,7 +119,7 @@ margin: 25px;
 
 .intro {
     color: #fff;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     flex: 1;
 }
@@ -522,92 +527,103 @@ text-decoration: underline;
 }
 --------------------------------------------------------------*/
 
-footer{
-    background: #343434;
-    padding-top: 50px;
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
 }
-.container{
-    width: 1140px;
-    margin: auto;
+
+footer .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
-.footer-content{
-    color: #fff;
-    width: 33.3%;
+
+footer .footer-content {
+    flex: 1 1 200px;
+    max-width: 300px;
 }
-h3{
-    color: #DA752F;
-    font-size: 28px;
-    margin-bottom: 15px;
-    text-align: center;
+
+footer .footer-content h3 {
+    margin-bottom: 10px;
 }
-.footer-content p{
-    
-    width:290px;
-    margin: auto;
-    padding: 7px;
-}
-.footer-content ul{
-    text-align: center;
-}
-.list{
-    padding: 2px;
-}
-.list li{
-    color: #fff;
-    width: auto;
-    text-align: center;
-    list-style-type:none;
-    padding: 7px;
-    position: relative;
-}
-.list li::before{
-    content: '';
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 100%;
-    width: 0;
-    height: 2px;
-    background: #DA752F;
-    transition-duration: .5s;
-}
-.list li:hover::before{
-    width: 70px;
-}
-.social-icons{
-    text-align: center;
+
+footer ul {
+    list-style: none;
     padding: 0;
 }
-.social-icons li{
-    display: inline-block;
-    text-align: center;
-    padding: 5px;
-}
-.social-icons i{
-    color: white;
-    font-size: 25px;
-}
-a{
+
+footer ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
 }
-a:hover{
-    color: #DA752F;
+
+footer ul li a:hover {
+    color: #f83600;
 }
-.social-icons i:hover{
-    color: #f18930;
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
-.bottom-bar{
-    background: #DA752F;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 50px;
+
+footer .social-icons li {
+    display: inline;
 }
-.bottom-bar p{
-    color: #343434;
-    margin: 0;
-    font-size: 16px;
-    padding: 7px;
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .explain-box2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .profile-img {
+        max-width: 150px;
+    }
+
+    footer .footer-content {
+        flex: 1 1 auto;
+    }
 }
