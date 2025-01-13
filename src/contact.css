@@ -1,11 +1,9 @@
-    /* General Reset and Global Styles */
-    body, html {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-      }
+  /* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
       
       .container {
         width: 90%;
@@ -42,6 +40,12 @@
       nav ul li.active a {
         color: #DA752F;
       }
+
+      @media (max-width: 768px) {
+        .nav {
+          display: block;
+        }
+      }
       
       .logo {
         max-height: 50px;
@@ -50,6 +54,12 @@
       /* Content */
       .content-container {
         margin: 30px 0;
+      }
+
+      @media (min-width: 768px) {
+        .content-container {
+          flex-direction: row;
+        }
       }
       
       h1 {
@@ -87,6 +97,21 @@
         margin-bottom: 15px;
         border: 1px solid #ddd;
         border-radius: 5px;
+      }
+
+      .col-md-8,
+      .col-md-4 {
+        width: 100%;
+      }
+      
+      @media (min-width: 768px) {
+        .col-md-8 {
+          width: 66.66%;
+        }
+      
+        .col-md-4 {
+          width: 33.33%;
+        }
       }
       
       .button {
@@ -165,4 +190,11 @@
           text-align: center;
         }
       
+      }
+
+      @media (max-width: 768px) {
+        footer .social-links {
+          flex-direction: column;
+          align-items: center;
+        }
       }
